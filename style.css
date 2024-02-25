@@ -1,3 +1,118 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
+    align-items: center;
+    background-color: rgb(97, 214, 227);
+}
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+img{
+    width: 450px;
+    height: 400px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background-color: rgb(238, 245, 246);
+    font-size: 20px;
+}
+aside{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+
+}
+aside h3{
+    color: red;
+}
+aside a{
+    color: black;
+    text-decoration: none;
+}
+aside a:hover{
+    color: red;
+}
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    article{
+        font-size: 27px;
+    }
+    aside{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .mobile{
+        display: none;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 580px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    article{
+        font-size: 32px;
+    }
+    aside{
+        gap: 5px;
+    }
+    aside .desk{
+        display: none;
+    }
+        ul{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+    }
+    aside a{
+        display: inline;
+        font-size: 15px;
+    }
+    aside a:hover{
+        color: red;
+    }
+    .mobile{
+        display: flex;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
 }
